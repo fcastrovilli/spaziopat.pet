@@ -1,4 +1,5 @@
 import { readPsd } from 'ag-psd';
+//@ts-expect-error - no types
 import { gsap } from 'gsap/dist/gsap';
 import mousePosition from '$lib/mousePosition';
 export const loadPsd = async (url: string, container: HTMLDivElement) => {
@@ -35,30 +36,8 @@ export const loadPsd = async (url: string, container: HTMLDivElement) => {
 	return container;
 };
 
-export const rotateAnimation = () => {
-	waitForElement('.animated').then(() => {
-		gsap.to('.animated', {
-			duration: 10,
-			ease: 'none',
-			repeat: -1,
-			rotation: 360
-		});
-	});
-};
-export const randomAnimation = () => {
-	waitForElement('.animated').then(() => {
-		gsap.to('.animated', {
-			x: 'random(-35, 55)',
-			y: 'random(-35, 55)',
-			ease: 'power2.inOut',
-			duration: 0.4,
-			rotation: 360,
-			repeat: -1,
-			repeatRefresh: true
-		});
-	});
-};
-export const followAnimation = () => {
+export const followMouseAnimation = (active: boolean) => {
+	if (active === false) return;
 	waitForElement('.animated').then(() => {
 		mousePosition.subscribe((value) => {
 			const depth = 10;
