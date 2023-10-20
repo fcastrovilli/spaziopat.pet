@@ -4,7 +4,7 @@
 
 html,
 body {
-	@apply h-full;
+	@apply h-full w-full;
 }
 
 img {
@@ -20,4 +20,8 @@ img {
 .no-scrollbar {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+.shadow-close {
+	background: linear-gradient(145deg, #ffffff, #e6e6e6);
+	box-shadow: 10px 10px 20px #c4c4c4, -10px -10px 20px #ffffff;
 }

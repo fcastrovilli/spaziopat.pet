@@ -1,9 +1,9 @@
 import { readable } from 'svelte/store';
 
-export default readable({ x: 0, y: 0 }, (set) => {
+export const mousePosition = readable({ x: 0, y: 0 }, (set) => {
 	document.body.addEventListener('mousemove', move);
 
-	function move(event) {
+	function move(event: { clientX: number; clientY: number }) {
 		set({
 			x: event.clientX,
 			y: event.clientY

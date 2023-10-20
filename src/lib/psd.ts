@@ -1,7 +1,7 @@
 import { readPsd } from 'ag-psd';
 //@ts-expect-error - no types
 import { gsap } from 'gsap/dist/gsap';
-import mousePosition from '$lib/mousePosition';
+import { mousePosition } from '$lib/stores';
 export const loadPsd = async (url: string, container: HTMLDivElement) => {
 	const xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
@@ -13,7 +13,6 @@ export const loadPsd = async (url: string, container: HTMLDivElement) => {
 			const psd = readPsd(buffer);
 			container.style.width = `${psd.width}px`;
 			container.style.height = `${psd.height}px`;
-			container.style.objectFit = 'contain';
 			psd.children?.forEach((layer) => {
 				if (layer.canvas === undefined || layer.hidden) return;
 				const clean = new Image();
@@ -26,7 +25,7 @@ export const loadPsd = async (url: string, container: HTMLDivElement) => {
 				clean.style.opacity = `${layer.opacity}`;
 				clean.style.mixBlendMode = `${layer.blendMode}`;
 				clean.src = layer.canvas.toDataURL();
-				clean.classList.add('animated');
+				clean.classList.add('animated', 'layers');
 				container.appendChild(clean);
 			});
 		},
@@ -45,7 +44,7 @@ export const followMouseAnimation = (active: boolean) => {
 			const moveY = value.y / depth;
 			gsap.to('.animated', { duration: 1.6, ease: 'elastic', rotateX: moveX });
 			gsap.to('.animated', { duration: 1.6, ease: 'elastic', rotateY: moveY });
-			gsap.to('.animated', { duration: 1.6, ease: 'elastic', rotateZ: moveX });
+			gsap.to('.animated', { duration: 1.6, ease: 'elastic', rotateZ: (moveX + moveY) / -2 });
 		});
 	});
 };

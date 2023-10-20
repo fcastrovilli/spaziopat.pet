@@ -14,15 +14,9 @@
 	});
 </script>
 
-<div class="flex justify-center items-center -my-20 w-screen">
-	<div bind:this={container} class="parent w-full object-cover" />
+<div class="h-full w-full no-scrollbar md:flex md:items-center md:justify-center">
+	<div
+		bind:this={container}
+		class="mt-32 md:-mt-32 absolute top-0 left-0 -translate-y-1/3 -translate-x-1/3 md:-translate-x-16 md:translate-y-0 lg:translate-x-0 lg:translate-y-0 md:relative scale-[0.3] md:scale-[0.50] lg:scale-[0.75] parent no-scrollbar"
+	/>
 </div>
-
-<style>
-	.parent {
-		position: relative;
-		margin: 0 auto;
-		width: 100%;
-		overflow: hidden;
-	}
-</style>
