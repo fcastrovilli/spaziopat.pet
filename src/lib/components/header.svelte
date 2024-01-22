@@ -6,11 +6,20 @@
 					>SPAZIO PAT</span
 				>
 			</a>
-			<a
-				href="/about"
-				class="font-arima tracking-[2px] md:tracking-[5px] text-sm md:text-base py-2 px-2 md:px-4 shadow-close rounded-full text-center"
-				>patpat</a
-			>
+			<div class="inline-flex space-x-4">
+				<!-- <a
+					href="/patpat"
+					class="font-arima tracking-[2px] md:tracking-[5px] text-sm md:text-base py-2 px-2 hover:shadow-close rounded-full text-center"
+				>
+					patpat
+				</a> -->
+				<a
+					href="https://t.me/spaziopat"
+					target="_blank"
+					class="font-arima tracking-[2px] md:tracking-[5px] text-sm md:text-base py-2 px-2 md:px-4 shadow-close rounded-full text-center"
+					><img src="img/telegram-logo.svg" alt="Spazio Pat Telegram" /></a
+				>
+			</div>
 		</div>
 	</nav>
 </header>
