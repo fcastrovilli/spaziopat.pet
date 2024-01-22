@@ -1,0 +1,35 @@
+[
+	{
+		"date": "01/05/2023",
+		"time": "18:00",
+		"title": "Forse che si forse che no",
+		"artist": "Lamby",
+		"caption": "Storie di immagini vaganti intorno a quattro oggetti",
+		"description": "this is great WOW! UIIIIIIII",
+		"tags": ["rebel", "art", "photo"],
+		"psd": "lamby/lamby.psd",
+		"preview_img": "lamby/lamby.jpg"
+	},
+	{
+		"date": "26/01/2024",
+		"time": "17:30",
+		"title": "Futuro Antico",
+		"artist": "Talk con Guerrilla Spam",
+		"caption": "Storie di immagini vaganti intorno a quattro oggetti",
+		"description": "Le immagini sono oggetti in costante movimento. Da sempre viaggiano ovunque, autonomamente o trasportate da qualcuno agli estremi del mondo. Così facendo hanno trasformato popoli e culture, sono state copiate, modificate o fraintese. Il talk è una rassegna di queste storie, che attraverso le immagini ci raccontano come non può esistere nulla di puro, incontaminato, nulla di nazionale in senso identitario, perché tutto ciò che consideriamo “nostro” è stato, oppure è ancora, anche un po' degli “altri”.",
+		"tags": ["talk", "guerriglia spam"],
+		"psd": "spam/spam.psd",
+		"preview_img": "spam/spam.jpg"
+	},
+	{
+		"date": "02/02/2024",
+		"time": "15:00",
+		"title": "YOGAAAA",
+		"artist": "giuliabelle<3",
+		"caption": "Storie di immagini vaganti intorno a quattro oggetti",
+		"description": "yoga sesssione with ayoooo",
+		"tags": ["yoga"],
+		"psd": "yoga/yoga_1.psd",
+		"preview_img": "yoga/yoga_1.jpg"
+	}
+]

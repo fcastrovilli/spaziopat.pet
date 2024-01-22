@@ -83,7 +83,8 @@ export const getPsdLayers = (url: string): Promise<Layer[]> => {
 
 export const followMouseAnimation = (active: boolean) => {
 	if (active === false) return;
-	waitForElement('.animated').then(() => {
+	waitForElement('.animated').then((element) => {
+		if (!element) return;
 		gsap.from('.animated', {
 			rotation: 360,
 			x: '100vw',
@@ -99,6 +100,7 @@ export const followMouseAnimation = (active: boolean) => {
 			gsap.to('.animated', { duration: 1.6, ease: 'elastic', rotateX: moveX });
 			gsap.to('.animated', { duration: 1.6, ease: 'elastic', rotateY: moveY });
 			gsap.to('.animated', { duration: 1.6, ease: 'elastic', rotateZ: (moveX + moveY) / -2 });
+			gsap.
 		});
 	});
 };
